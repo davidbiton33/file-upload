@@ -1,0 +1,34 @@
+<h1 style="text-align: center">הוסף אירוע</h1>
+
+<div style="text-align: center; direction: rtl;">
+  <form>
+    <br>
+    <input placeholder="שם האירוע" type="text" #eventName>
+    <br>
+    <br>
+    <textarea #eventDescription name="" placeholder="תיאור האירוע" id="" cols="30" rows="5"></textarea>
+    <br>
+    <br>
+    <input placeholder="מתי" type="text" #eventDate>
+    <br>
+    <br>
+    <input placeholder="באיזה שעה" type="text" #eventTime>
+    <br>
+    <br>
+    <input placeholder="איפה" type="text" #eventLocation>
+    <br>
+    <br>
+    <div>
+      <label for="">העלה תמונה לאירוע</label>
+      <br>
+      <br>
+      <input type="file" id="fileInput" #eventImg name="image" (change)="selectImage($event)" />
+    </div>
+    <hr>
+    <div>
+      <br>
+      <button type="submit" (click)="onSubmit(eventName.value, eventDescription.value, eventDate.value, eventTime.value, eventLocation.value, eventImg.value.name)">הפק את
+        האירוע</button>
+    </div>
+  </form>
+</div>
